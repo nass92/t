@@ -5,7 +5,7 @@ import Nft from "./SeeNFT/NFT";
 const GridText = ()=> {  return (
     
       <>
-      <Flex>
+      
   <Box p="170" mt="-130" >
     <TXT/>
   </Box>
@@ -13,7 +13,7 @@ const GridText = ()=> {  return (
   <Box p="170" mt="-130"  >
     <Nft/>
   </Box>
-  </Flex>
+  
 
   </>
 

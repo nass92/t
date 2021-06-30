@@ -9,6 +9,7 @@ function App() {
   return (
     <>
 <Login/>
+<NavBar/>
 <GridText/>
 <Footer/>
 </>

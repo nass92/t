@@ -30,11 +30,13 @@ const SendNFT = ({ value, setValue }) => {
 const handleSendNFT = async () => {
     const txt = value.txt.trim().split("").filter(el => !['!','?','.',';',':','/',','].includes(el)).join('').split('  ').join('').toLowerCase()
     const textHashed = await ethers.utils.id(txt)
+    console.log(value.author)
+    console.log(textHashed)
     const nft = {
-        textHashed: value.textHashed,
+        textHashed: textHashed,
         txt: value.txt,
         title: value.title,
-        author: value.author,
+        author: value.author.toString(),
         url: value.url,}
       setLoading(true)
     try {
@@ -59,7 +61,7 @@ const handleSendNFT = async () => {
     } catch (e) {
        toast({
         title: 'Error',
-        description: e.error ? e.error.message : e.message,
+        description:  e.message,
         status: 'error',
         position: 'top-right',
         duration: 9000,
@@ -85,14 +87,7 @@ const handleSendNFT = async () => {
             <ModalHeader>Create your NFT</ModalHeader>
             <ModalCloseButton />
             <ModalBody pb={6}>
-              <FormControl>
-                <FormLabel>NFT Name </FormLabel>
-                <Input 
-                value={value.textHashed} 
-                onChange={(e) => setValue({...value, textHashed: e.target.value})} 
-                placeholder="Very good NFT-text" 
-              />
-              </FormControl>
+           
   
               <FormControl mt={4}>
                 <FormLabel>Author name</FormLabel>

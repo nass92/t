@@ -1,4 +1,4 @@
-export const texTokenAddress = "0x21fAd151B1440aD357447F5e3D8e1Feb7aa676a7";
+export const texTokenAddress = "0xd9145CCE52D386f254917e481eB44e9943F39138";
 
 export const texTokenAbi = 
 [
@@ -78,24 +78,41 @@ export const texTokenAbi =
 	{
 		"inputs": [
 			{
-				"internalType": "bytes32",
-				"name": "textHashed",
-				"type": "bytes32"
+				"components": [
+					{
+						"internalType": "address",
+						"name": "author",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "textHashed",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "string",
+						"name": "txt",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "url",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "title",
+						"type": "string"
+					}
+				],
+				"internalType": "struct TexToken.Text",
+				"name": "nft",
+				"type": "tuple"
 			},
 			{
-				"internalType": "string",
-				"name": "txt",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "url",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "title",
-				"type": "string"
+				"internalType": "address",
+				"name": "owner",
+				"type": "address"
 			}
 		],
 		"name": "certify",
