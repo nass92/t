@@ -1,13 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import Dapp from "./Dapp";
+import reportWebVitals from "./reportWebVitals";
+
+import { Web3Provider } from "web3-hooks";
+import "bootstrap/dist/css/bootstrap.css";
+// 1. import `ChakraProvider` component
+import { ChakraProvider } from "@chakra-ui/react";
+// 1. Import the extendTheme function
+import { extendTheme } from "@chakra-ui/react";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <ChakraProvider >
+    <Web3Provider>
+      <Dapp />
+    </Web3Provider>
+  </ChakraProvider>
+</React.StrictMode>,
   document.getElementById('root')
 );
 
