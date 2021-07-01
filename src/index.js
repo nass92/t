@@ -3,6 +3,9 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import Dapp from "./Dapp";
 import reportWebVitals from "./reportWebVitals";
+import {
+  BrowserRouter as Router
+} from "react-router-dom";
 
 import { Web3Provider } from "web3-hooks";
 import "bootstrap/dist/css/bootstrap.css";
@@ -15,7 +18,9 @@ ReactDOM.render(
   <React.StrictMode>
   <ChakraProvider >
     <Web3Provider>
-      <Dapp />
+    <Router>
+    <Dapp />
+    </Router>
     </Web3Provider>
   </ChakraProvider>
 </React.StrictMode>,

@@ -15,7 +15,6 @@ return(
         boxSize={nft.url ? "200px": ""}
         objectFit="cover"
         src={nft.url}
-        alt={nft.url ? nft.title : ""}
         borderRadius="xl"
       />
     </Center>

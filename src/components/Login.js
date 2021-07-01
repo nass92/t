@@ -81,7 +81,7 @@ function Login({ title, desc, ...rest }) {
                 Welcome to Faucet
               </Text>
             </Heading>
-            <p>The TexTokenAddress : <a href="https://rinkeby.etherscan.io/address/0x768eb8674B0332c99FE97f196197Cb7250eEC508" style={{color: "red"}}>{texTokenAddress}</a></p>
+            <p>The TexTokenAddress : <a href="https://rinkeby.etherscan.io/address/0x836D1fF2fd2078240f4E24aA2413a5340b21B090" style={{color: "red"}}>{texTokenAddress}</a></p>
           </VStack>
 
           <div background={formBackground} p={12} rounded={10}>

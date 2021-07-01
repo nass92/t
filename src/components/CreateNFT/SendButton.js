@@ -19,6 +19,8 @@ import {
   import { Web3Context } from "web3-hooks";
   import { ethers } from "ethers";
 
+
+   
 const SendNFT = ({ value, setValue }) => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const TXT = useContext(DappContext)
@@ -27,19 +29,19 @@ const SendNFT = ({ value, setValue }) => {
     const toast = useToast()
 
 
-const handleSendNFT = async () => {
+  const handleSendNFT = async () => {
     const txt = value.txt.trim().split("").filter(el => !['!','?','.',';',':','/',','].includes(el)).join('').split('  ').join('').toLowerCase()
     const textHashed = await ethers.utils.id(txt)
-    console.log(value.author)
-    console.log(textHashed)
-    const nft = {
+   
+     const nft = {
+        author: value.author.toString(),
         textHashed: textHashed,
         txt: value.txt,
+        url: value.url,
         title: value.title,
-        author: value.author.toString(),
-        url: value.url,}
-      setLoading(true)
-    try {
+        }
+       setLoading(true)
+     try {
       const tx = await TXT.certify(nft, web3State.account)
       const network = web3State.networkName.toLowerCase()
       const link = `https://${network}.etherscan.io/tx/${tx.hash}`

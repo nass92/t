@@ -1,32 +1,22 @@
-import {Container, Box, Text, Input, Spacer, Button} from '@chakra-ui/react'
-import See from './SeeButton'
+import { Center, Container, Circle } from "@chakra-ui/react"
 
-const Nft = () => {
-    return(
-        <>
-        <Container align='center' >
-        <Box  h="55vh" backgroundColor="#6C6B6B"  w="md" borderWidth="10px" borderRadius="xl" boxShadow="2xl" p="10" overflow="hidden"  align="center">
-           
-        <Text align="center" fontSize="3xl">Check The Containe Of your NFT</Text>
-       
-          <Box w="75%">
-          <form  id="first-name" >
-          <Text align="center" fontSize="3xl">Your Address</Text>
-            <Input placeholder="Receiver" mb={2} 
-            />
-            <Spacer />
-            
-            <Text align="center" fontSize="3xl">The Id Of Your NFT</Text>
-            <Input placeholder="Receiver" mb={2} 
-            />
-             <See />
-           </form>
-          </Box>
-        </Box>
+import Tab2 from "./tab"
 
-        </Container>
-</>
 
+
+const NFT = ({nft}) => {
+
+  return (
+  <Container backgroundColor="purple.400" borderRadius="3rem" height="30rem" width="24rem" >
+    <Circle mb="-8" position="relative" bottom="1rem" left="-11rem"  size="16" fontWeight="bold" fontSize="40" color="white">
+      {nft.id}
+    </Circle>
+
+    <Tab2 nft = {nft} />
+
+  </Container>
     )
+
 }
-export default Nft;
+
+export default NFT

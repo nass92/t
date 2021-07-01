@@ -1,4 +1,4 @@
-export const texTokenAddress = "0xd9145CCE52D386f254917e481eB44e9943F39138";
+export const texTokenAddress = "0x6fea16449C01D85AB5a69ADDd161404e758a7E1f";
 
 export const texTokenAbi = 
 [
@@ -276,6 +276,52 @@ export const texTokenAbi =
 				"internalType": "address",
 				"name": "",
 				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "tokenId",
+				"type": "uint256"
+			}
+		],
+		"name": "getTXTById",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "author",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "textHashed",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "string",
+						"name": "txt",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "url",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "title",
+						"type": "string"
+					}
+				],
+				"internalType": "struct TexToken.Text",
+				"name": "",
+				"type": "tuple"
 			}
 		],
 		"stateMutability": "view",
