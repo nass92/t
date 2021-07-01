@@ -1,5 +1,5 @@
 
-import {Container, SimpleGrid, Heading, Button} from "@chakra-ui/react"
+import {Container, SimpleGrid, Heading} from "@chakra-ui/react"
 import { DappContext } from "../../Dapp"
 import { useState, useEffect, useContext } from "react"
 import { Web3Context } from "web3-hooks";
@@ -20,18 +20,20 @@ console.log(TXT)
         const getNFT = async () => {
           const expoOWned = []
           const totalSupply = await TXT.totalSupply()
-         
-          for(let i = 1; i <= totalSupply.toString(); i++ ) {
+          
+          for(let i = 0; i <= totalSupply.toString(); i++ ) {
+            
             let owner = await TXT.ownerOf(i)
+           
             let approved = await TXT.getApproved(i)
             
-            console.log(owner)
-            console.log(web3State.account)
+            
+            
             if (owner.toLowerCase() === web3State.account.toLowerCase()) {
-              
+             
               const nft = await TXT.getTXTById(i)
-              console.log("useEffectggggg")
-              console.log(nft.title)
+              
+              
               expoOWned.push({
                 txt: nft.txt,
                 title: nft.title,
@@ -39,8 +41,10 @@ console.log(TXT)
                 url: nft.url,
                 id: i,
               })
+              
             } else if (!approved.startsWith('0x000')) {
               const nft = await TXT.getTXTById(i)
+              
               expoOWned.push({
                 
                 txt: nft.txt,
@@ -49,11 +53,13 @@ console.log(TXT)
                 url: nft.url,
                 id: i,
             })}
+            setExpo(expoOWned)
           }
-          console.log(expoOWned)
-          setExpo(expoOWned)
+          console.log('ewewe')
+          
+          
         }
-  
+        
         try {
           getNFT()
         } catch (e) {
@@ -64,14 +70,12 @@ console.log(TXT)
     
   }, [TXT, web3State.account])
 
-  const Debug = () => {
-    console.log(expo)
-  }
+ 
 
   return(
     <Container centerContent as="section" maxW="container.xl" py="10">
       <Heading mb="5" fontSize="3xl">Your NFTs</Heading>
-      <Button onClick={Debug} > debug </Button>      
+          
       <SimpleGrid columns={[1, 1, 1, 2, 3]} gap="8">
         {expo.map((el, index) => {
           return <NFT key={index} nft={el}></NFT>

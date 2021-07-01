@@ -1,4 +1,4 @@
-export const texTokenAddress = "0x6fea16449C01D85AB5a69ADDd161404e758a7E1f";
+export const texTokenAddress = "0x3229fbCC416b4293d5619452Cfc33bb270E2ea6d";
 
 export const texTokenAbi = 
 [
@@ -123,6 +123,29 @@ export const texTokenAbi =
 				"type": "uint256"
 			}
 		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "marketPlace",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "price_",
+				"type": "uint256"
+			}
+		],
+		"name": "listNFT",
+		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
 	},
@@ -276,6 +299,25 @@ export const texTokenAbi =
 				"internalType": "address",
 				"name": "",
 				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			}
+		],
+		"name": "getPrice",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",

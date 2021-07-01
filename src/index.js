@@ -11,8 +11,7 @@ import { Web3Provider } from "web3-hooks";
 import "bootstrap/dist/css/bootstrap.css";
 // 1. import `ChakraProvider` component
 import { ChakraProvider } from "@chakra-ui/react";
-// 1. Import the extendTheme function
-import { extendTheme } from "@chakra-ui/react";
+
 
 ReactDOM.render(
   <React.StrictMode>

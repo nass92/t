@@ -1,9 +1,9 @@
 import TXT from "./CreateNFT/Text";
-import { Grid, GridItem, Flex, Box, Spacer } from "@chakra-ui/react";
-import Nft from "./SeeNFT/NFT";
+import { Box  } from "@chakra-ui/react";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import React from "react"
 import Exp from "./SeeNFT/Expo";
+import Store from "./Store/NFT-Store";
 const GridText = ()=> {  return (
     
   <Router>
@@ -15,6 +15,9 @@ const GridText = ()=> {  return (
          
             <Route exact path='/expo'>
               <Exp/>
+            </Route>
+            <Route exact path='/store'>
+              <Store/>
             </Route>
         </Box>
 

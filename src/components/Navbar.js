@@ -2,10 +2,9 @@ import {
     Breadcrumb,
     BreadcrumbItem,
     BreadcrumbLink,
-    BreadcrumbSeparator,
     Container,
   } from "@chakra-ui/react"
- import { Link as ReachLink } from "react-router-dom"
+ 
 
 const NavBar = () => {
 return (
@@ -22,7 +21,7 @@ return (
       </BreadcrumbItem>
     
     <BreadcrumbItem>
-        <BreadcrumbLink href="">Sell Your NFT </BreadcrumbLink>
+        <BreadcrumbLink href="store"> NFT Store</BreadcrumbLink>
     </BreadcrumbItem>
 
     </Breadcrumb>

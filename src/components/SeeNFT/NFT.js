@@ -1,19 +1,19 @@
-import { Center, Container, Circle } from "@chakra-ui/react"
-
-import Tab2 from "./tab"
+import {  Container, Circle, Box } from "@chakra-ui/react"
+import Content from "./Content"
 
 
 
 const NFT = ({nft}) => {
-
   return (
-  <Container backgroundColor="purple.400" borderRadius="3rem" height="30rem" width="24rem" >
+  <Container >
+    <Box  h="65vh" backgroundColor="#6C6B6B"  w="20rem" borderWidth="10px" borderRadius="xl" boxShadow="2xl" p="10" overflow="hidden"  align="center">
     <Circle mb="-8" position="relative" bottom="1rem" left="-11rem"  size="16" fontWeight="bold" fontSize="40" color="white">
       {nft.id}
     </Circle>
 
-    <Tab2 nft = {nft} />
-
+    <Content nft = {nft} />
+    
+    </Box>
   </Container>
     )
 

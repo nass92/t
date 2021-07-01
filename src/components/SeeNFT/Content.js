@@ -1,8 +1,8 @@
 import { Center, Heading, Image, Container, VStack} from "@chakra-ui/react"
 import ContentModal from "./SeeContent"
 
-
-const Tab2 = ({nft}) => {
+import Sell from './Sell'
+const Content= ({nft}) => {
 return(
 <Container>
   <VStack spacing="20px">
@@ -22,10 +22,10 @@ return(
     <Center>
       <ContentModal txt={nft.txt}/>
     </Center>
-    
+    <Sell nft={nft} />
   </VStack>
   </Container>
 )
 }
 
-export default Tab2
+export default Content

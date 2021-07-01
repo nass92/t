@@ -1,4 +1,4 @@
-import { Text, Box,   Textarea, Button, Image, Spacer } from "@chakra-ui/react"
+import { Text, Box,   Textarea} from "@chakra-ui/react"
 import { Container } from "@chakra-ui/react"
 import { useState } from "react"
 import SendNFT from "./SendButton"

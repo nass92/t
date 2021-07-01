@@ -11,7 +11,7 @@ import {
   import {useDisclosure} from "@chakra-ui/react"
   import {useRef} from "react"
   
-  function ContentModal({txt}) {
+  function ContentModal({txt,}) {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = useRef()
   
