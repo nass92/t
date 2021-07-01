@@ -4,7 +4,7 @@ import ContentModal from "./SeeContent"
 import Sell from './Sell'
 const Content= ({nft}) => {
 return(
-<Container>
+<Container >
   <VStack spacing="20px">
     <Center mt="-5" position="relative">
       <Heading as="h1" size="lg">{nft.title}</Heading>
