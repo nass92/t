@@ -68,7 +68,7 @@ console.log(TXT)
       }
     }
     
-  }, [TXT, web3State.account])
+  }, [TXT, web3State.account, web3State.chainId])
 
  
 

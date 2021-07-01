@@ -1,4 +1,4 @@
-import {  Container, Circle, Box } from "@chakra-ui/react"
+import { Circle, Box } from "@chakra-ui/react"
 import Content from "./Content"
 
 

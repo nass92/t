@@ -25,7 +25,7 @@ const SendNFT = ({ value, setValue }) => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const TXT = useContext(DappContext)
     const [web3State] = useContext(Web3Context);
-    const [loading, setLoading] = useState(false)
+    const [, setLoading] = useState(false)
     const toast = useToast()
 
 

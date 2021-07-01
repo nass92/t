@@ -9,7 +9,7 @@ import List from "./List"
 const Store= ({nft}) => {
   const [web3State] = useContext(Web3Context);
   const [list, setlisting] = useState([]);
-  const [etherBalance, setEtherBalance] = useState(0);
+  const [, setEtherBalance] = useState(0);
   const TXT = useContext(DappContext)
   const Store = useContext(DappContext)
 
