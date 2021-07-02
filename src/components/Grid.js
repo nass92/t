@@ -11,7 +11,7 @@ const GridText = ()=> {  return (
       <Switch>
 
          <Box p="170" mt="-130" >
-            <Route path='/home' exact component={TXT} /> 
+            <Route path='/' exact component={TXT} /> 
          
             <Route exact path='/expo'>
               <Exp/>

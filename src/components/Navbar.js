@@ -13,7 +13,7 @@ return (
       <Breadcrumb separator=" / ">
 
       <BreadcrumbItem>
-        <BreadcrumbLink href="home" > Make Your NFT</BreadcrumbLink>
+        <BreadcrumbLink href="/" > Make Your NFT</BreadcrumbLink>
       </BreadcrumbItem>
 
       <BreadcrumbItem>
