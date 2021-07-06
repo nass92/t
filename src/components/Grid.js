@@ -13,7 +13,7 @@ const GridText = ()=> {  return (
          <Box p="170" mt="-130" >
             <Route path='/' exact component={TXT} /> 
          
-            <Route exact path='/expo'>
+            <Route exact path='/expo' component={Exp}>
               <Exp/>
             </Route>
             <Route exact path='/store'>
